@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo/layout/cubit/todo_cubit.dart';
 import 'package:todo/layout/cubit/todo_states.dart';
 
-import 'layout/todo_layout_screen.dart';
+import '../../layout/todo_layout_screen.dart';
 
 class UserScreen extends StatelessWidget {
   const UserScreen({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class UserScreen extends StatelessWidget {
               Icons.done_all_sharp,
               color: Colors.green,
             ),
-            title: Text("Todo App"),
+            title: Text("Employees"),
           ),
           body: ConditionalBuilder(
               condition: (state is! TodoGetUsersLoadingState || state is! TodoGetTasksLoadingState ),
@@ -36,8 +36,7 @@ class UserScreen extends StatelessWidget {
                             shrinkWrap: true,
                             itemBuilder: (context, index) => InkWell(
                               onTap: () async {
-                                Navigator.push(
-                                    context,
+                                Navigator.push(context,
                                     MaterialPageRoute(
                                         builder: (context) => LayoutScreen()));
                                 await TodoCubit.get(context)
@@ -73,14 +72,13 @@ class UserScreen extends StatelessWidget {
                                           children: [
                                             Text(
                                               "Name: ",
-                                              style: TextStyle(color: Colors.black45,fontSize: 20),
+                                              style: TextStyle(color: Colors.black45,fontSize: 16),
                                             ),
                                             Text(
-                                              TodoCubit.get(context)
-                                                  .usersList[index]
-                                                  .name as String,
+                                              TodoCubit.get(context).usersList[index].name as String,
+
                                               style: TextStyle(
-                                                fontSize: 20,
+                                                fontSize: 16,
                                               ),
                                             ),
                                           ],
@@ -89,7 +87,7 @@ class UserScreen extends StatelessWidget {
                                           children: [
                                             Text(
                                               "Company: ",
-                                              style: TextStyle(color: Colors.black45,fontSize: 20),
+                                              style: TextStyle(color: Colors.black45,fontSize: 16),
                                             ),
                                             Text(
                                               TodoCubit.get(context)
@@ -97,7 +95,7 @@ class UserScreen extends StatelessWidget {
                                                   .company!
                                                   .name as String,
                                               style: TextStyle(
-                                                  fontSize: 20,
+                                                  fontSize: 16,
                                                   color: Colors.black
                                                   ),
                                             ),
