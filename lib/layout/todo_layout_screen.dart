@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo/modules/current_tasks_screen/current_tasks_screen.dart';
-import 'package:todo/user_screen.dart';
 import 'package:todo/layout/cubit/todo_states.dart';
 
 import 'cubit/todo_cubit.dart';

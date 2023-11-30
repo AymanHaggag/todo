@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:todo/dio_helper.dart';
+import 'package:todo/shared/dio_helper.dart';
 import 'package:todo/layout/cubit/todo_states.dart';
 import 'package:todo/models/task_model.dart';
 import 'package:todo/models/user_model.dart';

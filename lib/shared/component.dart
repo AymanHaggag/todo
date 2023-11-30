@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'layout/cubit/todo_cubit.dart';
+import '../layout/cubit/todo_cubit.dart';
 
 GlobalKey key = GlobalKey();
 Widget buildTaskCard ()=>  Card(
